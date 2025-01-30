@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HiApp</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="script/script.js"></script>
+</head>
+<body>
+
+    <div id="screen1" class="screen">
+        <h1>HiApp</h1>
+        <p>Sveiki</p>
+        <input type="text" id="nameInput" placeholder="Kā tevi sauc?">
+        <button onclick="saveName()">Gatavs!</button>
+    </div>
+
+    <div id="screen2" class="screen hidden">
+        <h2 id="greeting"></h2>
+        <p>Kāpēc lejupielādējāt HiApp?</p>
+        <label><input type="radio" name="reason" value="1"> Man ir bail no publiskas uzstāšanās</label>
+        <label><input type="radio" name="reason" value="2"> Man ir bail komunicēt ar svešiniekiem</label>
+        <label><input type="radio" name="reason" value="3"> Es baidos, ka mani tiesās par manu viedokli</label>
+        <label><input type="radio" name="reason" value="4"> Es neesmu pārliecināts(-ta) par sevi</label>
+        <button onclick="saveAnswer()">Gatavs!</button>
+    </div>
+
+    <div id="screen3" class="screen hidden">
+        <header>
+            <button class="menu-btn" onclick="toggleMenu()">☰</button>
+            <div class="profile-icon" id="profileIcon"></div>
+        </header>
+        <h2 id="profileGreeting"></h2>
+        <div class="stats">
+            <p>Atliktie uzdevumi: <span>0</span></p>
+            <p>Lietotāju reitings: <span>101. vieta</span></p>
+            <p>Pašreizējā sērija: <span>1</span></p>
+        </div>
+        <p id="currentDate"></p>
+        <div class="task">
+            <p>Tavs šodienas uzdevums:</p>
+            <strong>Uzdod jautājumu nepazīstamam cilvēkam!</strong>
+            <p class="example">Piemēram: cik ir pulkstenis?</p>
+            <button class="success">Izdoas!</button>
+            <button class="postpone">Atlikt uz laiku :(</button>
+        </div>
+    </div>
+
+    <div id="menu">
+        <ul>
+            <button class="menu-btn" onclick="toggleMenu()">Menu ☰</button>
+
+            <li>Iestatījumi</li>
+            <li>Jautājumi</li>
+            <li>Palīdzība</li>
+            <li class="exit" onclick="logout()">Iziet</li>
+        </ul>
+    </div>
+</body>
+</html>
